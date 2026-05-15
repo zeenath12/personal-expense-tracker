@@ -112,19 +112,29 @@ if "transactions" not in st.session_state:
 # ---------------- SIDEBAR ----------------
 st.sidebar.title("💸 Expense Tracker")
 
+if "page" not in st.session_state:
+    st.session_state.page = "Dashboard"
+
 page = st.sidebar.radio(
     "Navigate",
-    ["Dashboard", "Add Transaction", "Transactions", "Analytics"]
+    ["Dashboard", "Add Transaction", "Transactions", "Analytics"],
+    index=["Dashboard", "Add Transaction", "Transactions", "Analytics"].index(
+        st.session_state.page
+    )
 )
+
+st.session_state.page = page
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### ⚡ Shortcuts")
 
 if st.sidebar.button("➕ Quick Add Income"):
     st.session_state.quick_type = "Income"
+    st.session_state.page = "Add Transaction"
 
 if st.sidebar.button("💸 Quick Add Expense"):
     st.session_state.quick_type = "Expense"
+    st.session_state.page = "Add Transaction"
 
 st.sidebar.markdown("""
 <div class="shortcut-box">
