@@ -1,0 +1,1 @@
+The Personal Expense Tracker is a Python-based web application developed using Streamlit to help users record, manage, and analyze their daily expenses. The project provides an interactive interface for tracking spending and understanding personal expense patterns.
