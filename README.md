@@ -1,4 +1,4 @@
-# Personal Expense Tracker
+# Personal Expense Tracker Using Python
 
 A simple and interactive **Personal Expense Tracker** built using **Python, Pandas, NumPy, and Streamlit**. The application helps users record, organize, and analyze their daily expenses through an easy-to-use web interface.
 
